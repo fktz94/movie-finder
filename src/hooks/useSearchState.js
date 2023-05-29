@@ -11,6 +11,7 @@ export default function useSearchState() {
     const { query } = Object.fromEntries(new FormData(event.target));
     if (query === '') return setSearchError('no movie was introduced');
     if (query.startsWith(' ')) return setSearchError('cannot start with an empty space');
+    if (query.endsWith(' ')) return setSearchError('unnecesary empty space at the end');
     if (query.match(/\s{2}/g)) return setSearchError('too many blank spaces');
     if (query.length < 3) return setSearchError('3 characters minimum');
     const searchableValue = query.split(' ').join('%20');
