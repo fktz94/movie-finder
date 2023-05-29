@@ -8,4 +8,6 @@ Se utilizan dos **customHook**, uno para la búsqueda y otro para devolver la in
 
 La App está dividida en _componentes_, uno por cada parte del DOM.
 
+El listado de películas se muestran en una grid responsive. El resto de la estilización de la interfaz se hizo con una drop-in collection de CSS llamada _WaterCSS_.
+
 Se utiliza _ESLint_ + _Prettier_ para mejorar la escritura y prolijidad del código
