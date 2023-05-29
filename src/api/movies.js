@@ -15,7 +15,7 @@ export default async function getMoviesFromApi(movieTitle, page) {
     const { Search, totalResults } = json;
     return { Search, totalResults };
   } catch (e) {
-    console.error(e.message);
+    // console.error(e.message);
     throw new Error(e.message);
   }
 }

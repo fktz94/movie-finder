@@ -10,7 +10,7 @@ export default async function loadFilmData(movieTitle, page) {
   try {
     return loadFilmsDataFromLocalStorage(movieTitle, page);
   } catch (e) {
-    console.error(e.message);
+    // console.error(e.message);
     const filmsData = await getMoviesFromApi(movieTitle, page);
     const films = mapMovies(filmsData);
     saveFilmsDataOnLocalStorage(movieTitle, page, films);
